@@ -6,7 +6,7 @@ section{
     height: 100vh;
 }
 .container-home{
-    background: url('/images/background.jpg') no-repeat;
+    background: url('../img/back.png') no-repeat;
     height: 100vh;
     width: 100%;
     background-size: cover;
