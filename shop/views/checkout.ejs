@@ -1,0 +1,29 @@
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+<h1>Checkout</h1>
+<form class="form" method="POST" action="/checkout">
+  <div class="grid two">
+    <label>Full name
+      <input name="fullName" required />
+    </label>
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+  </div>
+  <label>Address
+    <input name="address" required />
+  </label>
+  <div class="grid two">
+    <label>City
+      <input name="city" required />
+    </label>
+    <label>Country
+      <input name="country" required />
+    </label>
+  </div>
+  <div class="checkout-summary">
+    <div>Order total: <strong><%= formatPrice(cart.totalCents) %></strong></div>
+  </div>
+  <button class="btn" type="submit">Place order</button>
+</form>
+<%- include('partials/footer') %>

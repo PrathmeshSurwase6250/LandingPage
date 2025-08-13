@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+<h1>Thank you!</h1>
+<p>Your order <strong>#<%= order.id %></strong> was placed successfully.</p>
+<p>We sent a confirmation to <strong><%= order.email %></strong>.</p>
+<h2>Order summary</h2>
+<ul class="order-items">
+  <% items.forEach(it => { %>
+    <li class="order-item">
+      <img src="<%= it.image_url %>" alt="<%= it.name %>" />
+      <div>
+        <div><%= it.name %></div>
+        <div class="muted">Qty: <%= it.quantity %></div>
+      </div>
+      <div><%= formatPrice(it.unit_price_cents) %></div>
+    </li>
+  <% }) %>
+</ul>
+<p class="total">Order total: <strong><%= formatPrice(order.total_cents) %></strong></p>
+<a class="btn" href="/products">Continue shopping</a>
+<%- include('partials/footer') %>

@@ -1,0 +1,51 @@
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+<h1>Your cart</h1>
+<% if (cart.totalItems === 0) { %>
+  <p>Your cart is empty. <a href="/products">Browse products</a>.</p>
+<% } else { %>
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Subtotal</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Object.values(cart.items).forEach(item => { %>
+        <tr>
+          <td class="cart-item">
+            <img src="<%= item.imageUrl %>" alt="<%= item.name %>" />
+            <span><%= item.name %></span>
+          </td>
+          <td><%= formatPrice(item.unitPriceCents) %></td>
+          <td>
+            <form method="POST" action="/cart/update" class="inline">
+              <input type="hidden" name="productId" value="<%= item.productId %>" />
+              <input type="number" name="quantity" min="0" value="<%= item.quantity %>" />
+              <button class="btn-sm" type="submit">Update</button>
+            </form>
+          </td>
+          <td><%= formatPrice(item.unitPriceCents * item.quantity) %></td>
+          <td>
+            <form method="POST" action="/cart/remove" class="inline">
+              <input type="hidden" name="productId" value="<%= item.productId %>" />
+              <button class="link" type="submit">Remove</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <div class="cart-summary">
+    <div>
+      <div>Total items: <strong><%= cart.totalItems %></strong></div>
+      <div>Order total: <strong><%= formatPrice(cart.totalCents) %></strong></div>
+    </div>
+    <a class="btn" href="/checkout">Proceed to checkout</a>
+  </div>
+<% } %>
+<%- include('partials/footer') %>

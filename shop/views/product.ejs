@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+<div class="product-detail">
+  <div class="product-media">
+    <img src="<%= product.image_url %>" alt="<%= product.name %>" />
+  </div>
+  <div class="product-info">
+    <h1><%= product.name %></h1>
+    <p class="price"><%= formatPrice(product.price_cents) %></p>
+    <p><%= product.description %></p>
+    <p class="muted">In stock: <%= product.stock %></p>
+    <form method="POST" action="/cart/add" class="inline">
+      <input type="hidden" name="productId" value="<%= product.id %>" />
+      <label>
+        Qty
+        <input type="number" min="1" max="<%= product.stock %>" name="quantity" value="1" />
+      </label>
+      <button class="btn" type="submit">Add to cart</button>
+    </form>
+  </div>
+</div>
+<%- include('partials/footer') %>
