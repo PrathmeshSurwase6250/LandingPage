@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopHub - Your Ultimate Shopping Destination</title>
+    <title>About Us - ShopHub</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -15,10 +15,10 @@
                 <h1><i class="fas fa-shopping-bag"></i> ShopHub</h1>
             </div>
             <div class="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="products.html" class="nav-link">Products</a>
                 <a href="categories.html" class="nav-link">Categories</a>
-                <a href="about.html" class="nav-link">About</a>
+                <a href="about.html" class="nav-link active">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
@@ -81,89 +81,129 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to ShopHub</h1>
-                <p>Discover amazing products at unbeatable prices</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="location.href='products.html'">
-                        Shop Now
-                    </button>
-                    <button class="btn btn-secondary" onclick="location.href='categories.html'">
-                        Browse Categories
-                    </button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="img/hero-shopping.jpg" alt="Shopping" onerror="this.style.display='none'">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>About ShopHub</h1>
+                <p>Your trusted partner in online shopping</p>
             </div>
         </section>
 
-        <!-- Categories Section -->
-        <section class="categories">
+        <!-- Company Story -->
+        <section class="company-story">
             <div class="container">
-                <h2>Shop by Category</h2>
-                <div class="category-grid">
-                    <div class="category-card" onclick="filterByCategory('electronics')">
-                        <i class="fas fa-laptop"></i>
-                        <h3>Electronics</h3>
-                        <p>Latest gadgets and tech</p>
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2>Our Story</h2>
+                        <p>Founded in 2020, ShopHub began with a simple mission: to make online shopping easier, more enjoyable, and more accessible for everyone. What started as a small local business has grown into a trusted online marketplace serving customers worldwide.</p>
+                        <p>We believe that everyone deserves access to quality products at fair prices, delivered with exceptional customer service. Our team works tirelessly to curate the best selection of products from trusted brands and suppliers.</p>
+                        <p>Today, ShopHub continues to innovate and expand, always keeping our customers' needs at the heart of everything we do.</p>
                     </div>
-                    <div class="category-card" onclick="filterByCategory('clothing')">
-                        <i class="fas fa-tshirt"></i>
-                        <h3>Clothing</h3>
-                        <p>Fashion for everyone</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('home')">
-                        <i class="fas fa-home"></i>
-                        <h3>Home & Garden</h3>
-                        <p>Make your home beautiful</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('sports')">
-                        <i class="fas fa-dumbbell"></i>
-                        <h3>Sports & Fitness</h3>
-                        <p>Stay active and healthy</p>
+                    <div class="story-image">
+                        <img src="https://via.placeholder.com/500x400?text=Our+Story" alt="ShopHub Story">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Products -->
-        <section class="featured-products">
+        <!-- Mission & Values -->
+        <section class="mission-values">
             <div class="container">
-                <h2>Featured Products</h2>
-                <div class="product-grid" id="featuredProducts">
-                    <!-- Products will be dynamically loaded here -->
+                <h2>Our Mission & Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Customer First</h3>
+                        <p>We put our customers at the center of everything we do, ensuring their satisfaction and happiness.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Quality Assurance</h3>
+                        <p>We carefully select and verify all products to ensure they meet our high quality standards.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>We understand the importance of timely delivery and work hard to get your orders to you quickly.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Trust & Transparency</h3>
+                        <p>We believe in building long-term relationships based on trust, honesty, and transparency.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Special Offers -->
-        <section class="special-offers">
+        <!-- Team Section -->
+        <section class="team-section">
             <div class="container">
-                <h2>Special Offers</h2>
-                <div class="offers-grid">
-                    <div class="offer-card">
-                        <div class="offer-content">
-                            <h3>Free Shipping</h3>
-                            <p>On orders over $50</p>
+                <h2>Meet Our Team</h2>
+                <p class="team-intro">The passionate people behind ShopHub's success</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://via.placeholder.com/300x300?text=CEO" alt="CEO">
                         </div>
-                        <i class="fas fa-shipping-fast"></i>
+                        <div class="member-info">
+                            <h3>Sarah Johnson</h3>
+                            <p class="position">CEO & Founder</p>
+                            <p class="bio">With over 10 years of experience in e-commerce, Sarah leads our company with vision and passion.</p>
+                        </div>
                     </div>
-                    <div class="offer-card">
-                        <div class="offer-content">
-                            <h3>30% Off</h3>
-                            <p>New customer discount</p>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://via.placeholder.com/300x300?text=CTO" alt="CTO">
                         </div>
-                        <i class="fas fa-percentage"></i>
+                        <div class="member-info">
+                            <h3>Michael Chen</h3>
+                            <p class="position">Chief Technology Officer</p>
+                            <p class="bio">Michael ensures our platform runs smoothly and securely, constantly improving the user experience.</p>
+                        </div>
                     </div>
-                    <div class="offer-card">
-                        <div class="offer-content">
-                            <h3>24/7 Support</h3>
-                            <p>We're here to help</p>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://via.placeholder.com/300x300?text=CMO" alt="CMO">
                         </div>
-                        <i class="fas fa-headset"></i>
+                        <div class="member-info">
+                            <h3>Emily Rodriguez</h3>
+                            <p class="position">Chief Marketing Officer</p>
+                            <p class="bio">Emily creates innovative marketing strategies that connect us with customers worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://via.placeholder.com/300x300?text=COO" alt="COO">
+                        </div>
+                        <div class="member-info">
+                            <h3>David Thompson</h3>
+                            <p class="position">Chief Operations Officer</p>
+                            <p class="bio">David oversees our daily operations, ensuring everything runs efficiently and customers are satisfied.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Products</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Customer Support</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
                     </div>
                 </div>
             </div>
@@ -272,5 +312,11 @@
     </div>
 
     <script src="js/app.js"></script>
+    <script>
+        // Additional JavaScript for about page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateUserInterface();
+        });
+    </script>
 </body>
 </html>
