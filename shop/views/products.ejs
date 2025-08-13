@@ -1,0 +1,16 @@
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+<h1>All products</h1>
+<div class="grid">
+  <% products.forEach(p => { %>
+    <a class="card" href="/product/<%= p.id %>">
+      <img src="<%= p.image_url %>" alt="<%= p.name %>" />
+      <div class="card-body">
+        <h3><%= p.name %></h3>
+        <p class="price"><%= formatPrice(p.price_cents) %></p>
+        <p class="muted">In stock: <%= p.stock %></p>
+      </div>
+    </a>
+  <% }) %>
+</div>
+<%- include('partials/footer') %>
